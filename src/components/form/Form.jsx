@@ -1,29 +1,19 @@
 "use client";
 import React, { useState } from "react";
 
-const Form = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add your submit logic here
-  };
+async function Newsletter() {
+  async function sendData(formData) {
+    "use server";
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+    };
+    await postData(data);
+  }
 
   return (
     <form
-      onSubmit={handleSubmit}
+      action={sendData}
       className="max-w-md mx-auto bg-white p-8 m-8 rounded-lg shadow-md"
     >
       <h2 className="text-2xl font-bold mb-6 text-gray-700">Contact Us</h2>
@@ -63,6 +53,6 @@ const Form = () => {
       </button>
     </form>
   );
-};
+}
 
-export default Form;
+export default Newsletter;
