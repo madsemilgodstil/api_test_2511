@@ -38,7 +38,7 @@ const Form = () => {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none text-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
       </div>
       <div className="mb-4">
@@ -52,7 +52,7 @@ const Form = () => {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none text-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
       </div>
       <button
