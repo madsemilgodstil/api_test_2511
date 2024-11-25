@@ -7,12 +7,15 @@ const headersList = {
   prefer: 'return=representation'
 }
 
-async function getSubs () {
-  let response = await fetch('url', {
+export async function getSubs () {
+  const response = await fetch(url, {
     method: 'GET',
     headers: headersList
   })
 
-  let data = await response.json()
+  const data = await response.json()
+
   console.log(data)
+
+  return data
 }
