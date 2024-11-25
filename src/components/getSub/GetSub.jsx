@@ -1,4 +1,4 @@
-import { getSubs } from "../lib/api_get";
+import { getSubs } from "@/lib/api_get";
 
 async function getSubscribers() {
   const subs = await getSubs();
