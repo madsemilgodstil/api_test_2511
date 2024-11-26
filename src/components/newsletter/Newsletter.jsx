@@ -1,13 +1,16 @@
-import { postSub } from "@/lib/api_post";
+import { postSub } from "@/app/lib/supabase";
 import { revalidatePath } from "next/cache";
 
 async function Newsletter() {
   async function sendData(formData) {
     "use server";
     const data = {
-      name: formData.get("name"),
+      name: formData.get("navn"),
       email: formData.get("email"),
     };
+
+    console.log(data);
+
     await postSub(data);
 
     revalidatePath("/");
@@ -25,7 +28,7 @@ async function Newsletter() {
         <input
           type="text"
           id="name"
-          name="name"
+          name="navn"
           className="w-full px-3 py-2 border text-gray-700 border-gray-300 rounded"
         />
       </div>

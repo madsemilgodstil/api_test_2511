@@ -1,3 +1,5 @@
+import { getSubsById } from '@/app/lib/supabase'
+
 async function page ({ params }) {
   const { id } = await params
 

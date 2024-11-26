@@ -1,4 +1,5 @@
-import { getSubs } from "@/lib/api_get";
+import { getSubs } from "@/app/lib/supabase";
+import Link from "next/link";
 
 async function getSubscribers() {
   const subs = await getSubs();
@@ -14,7 +15,12 @@ async function getSubscribers() {
             key={sub.id}
             className="bg-blue-100 p-2 rounded-md shadow-sm text-center"
           >
-            {sub.email}
+            <Link
+              href={`src/app/update/${sub.id}`}
+              className="text-blue-600 hover:underline"
+            >
+              {sub.email}
+            </Link>
           </li>
         ))}
       </ul>
