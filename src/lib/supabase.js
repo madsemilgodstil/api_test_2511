@@ -1,11 +1,9 @@
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL
-
 const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
 const headersList = {
   Accept: '*/*',
   'Content-Type': 'application/json',
-  'User-Agent': 'Thunder Client (https://www.thunderclient.com)',
   apikey: key,
   Prefer: 'return=representation'
 }
