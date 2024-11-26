@@ -18,7 +18,7 @@ export default async function Home() {
   }
 
   return (
-    <div className="max-w-xl mx-auto p-6 flex flex-col gap-8">
+    <div className="max-w-lg mx-auto p-6 flex flex-col gap-8">
       <h1 className="text-3xl font-bold text-gray-800">Subscribe</h1>
       <form action={post} className="w-full bg-white p-8 rounded-lg shadow-lg">
         <div className="mb-6">

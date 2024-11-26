@@ -5,7 +5,7 @@ async function getSubscribers() {
   const subs = await getSubs();
 
   return (
-    <div className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-md">
+    <div className="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md">
       <h1 className="text-blue-500 text-center text-2xl font-bold mb-4">
         All Subscribers
       </h1>
